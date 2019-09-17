@@ -1,0 +1,19 @@
+反射：
+  ž在程序运行状态中：
+  1对于任意一个类，都能获取这个类的所有属性和方法；
+  2对于一个对象，能够调用任意一个属性和方法；
+  
+  这种在运行状态中能动态的调用信息及动态的调用对象的方法的能力叫做反射。
+  
+  X相关API
+    ˚F反射相关的API都在的JAV.lang包中
+    Class/Interface               |            function
+    Class                               表示运行中的类和接口
+    Field                               表示类中的属性
+    Method                              表示类中的方法
+    Constructor                         表示类的构造方法
+    Package                             表示类所属的包
+    Annotation                          表示注解
+    Modifier                            表示修饰符
+    
+    
