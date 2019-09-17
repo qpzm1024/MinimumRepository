@@ -1,0 +1,10 @@
+简介
+ 一 类加载
+ 将class文件读取到内存的过程称为类加载
+ class文件的加载由ClassLoader完成，称为类加载器。
+ 类加载器有三种类型：
+  1.BootStrapClassLoader 启动类加载器 用C++编写，由JVM在启动时加载初始化的，主要负责加载%JAVA_HOME%/jre/lib路径下的类
+  2.ExtClassLoader 扩展类加载器  用JAVA编写，由BootStrapClassLoader加载，主要负责加载%JAVA_HOME%/jre/lib/ext路径下的类
+  3.AppClassLoader 系统类加载器 由BootStrapClassLoader加载，主要是加载classpath路径下的类
+  可以使用类名.class.getClassLoader()获取当前类的类加载器
+  class文件被读取到内存中会被封装成java.lang.Class对象
