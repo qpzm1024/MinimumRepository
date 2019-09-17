@@ -7,4 +7,4 @@
   2.ExtClassLoader 扩展类加载器  用JAVA编写，由BootStrapClassLoader加载，主要负责加载%JAVA_HOME%/jre/lib/ext路径下的类
   3.AppClassLoader 系统类加载器 由BootStrapClassLoader加载，主要是加载classpath路径下的类
   可以使用类名.class.getClassLoader()获取当前类的类加载器
-  class文件被读取到内存中会被封装成java.lang.Class对象
+  类文件被读取到内存中会被封装成的java.lang.Class中的对象
