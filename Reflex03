@@ -1,0 +1,12 @@
+Class对象
+简介
+ 运行中的Class文件通过Class对象来表示
+ Class对象是类加载时由JVM自动创建的，一个类在JVM中只有一个Class对象
+ Class类没有公共的构造方法，不能自己创建，但可以获取其实例并进行操作
+ User.java--->User.class--->Class对象
+  Class是反射中的核心类，要想操作类中的属性和方法，都必须从获取Class对象开始
+  
+  获取Class对象的三种方法
+   1.调用对象的getClass方法
+   2.调用类的class属性
+   3.调用Class类的forName()静态方法
