@@ -10,3 +10,45 @@ Class对象
    1.调用对象的getClass方法
    2.调用类的class属性
    3.调用Class类的forName()静态方法
+package main.Java;
+
+import java.lang.reflect.Modifier;
+
+/**
+ * Author Rubick
+ * Date: 2019-09-17 17:39
+ * Description :
+ */
+public class Reflex03 {
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+        Class<Student> s1 = Student.class;
+        /*
+        获取类的信息
+         */
+        System.out.println("类的全名: "+s1.getName());
+        System.out.println("类的简单名： "+s1.getSimpleName());
+        System.out.println("类是否为接口: "+s1.isInterface());
+
+        //获取父类
+        System.out.println("父类: "+s1.getSuperclass().getName());
+
+        //获取实现的接口
+        Class<?>[] interfaces = s1.getInterfaces();
+        System.out.print("实现的接口 ");
+        for(Class c : interfaces){
+            System.out.print(c.getSimpleName()+ "\t");
+        }
+        System.out.println();
+        //获取修饰符
+        int modifiers = s1.getModifiers();
+        System.out.println(Modifier.toString(modifiers));//Modifer传入参数，将int类型转换为String类型
+
+        //获取包
+        Package aPackage = s1.getPackage();
+        System.out.println(aPackage);
+
+        Student student = s1.newInstance();
+
+    }
+}
+
